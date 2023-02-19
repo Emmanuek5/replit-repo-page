@@ -2,8 +2,9 @@ const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
 const fs = require('fs')
-
+const { urlencoded } = require('body-parser')
 app.use(express.json())
+app.use(urlencoded({extended: false}))
 const  users = []
 
 app.get('/video', (req, res) =>
@@ -65,4 +66,6 @@ catch{
 }
 })
 
-app.listen(80)
+app.listen(1200,()=>{
+  console.log("Server Started");
+})
