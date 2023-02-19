@@ -31,16 +31,13 @@ try {
       
     }
 const users = await generateFakeUserData(number)
- const data= {
-   users,
-   ip: req.ip,
-   
- }
-    res.json(data)
-} catch (e) {
-  res.send(e).status(500)
+
+    res.json(users)
+} catch (e){}
+ res.send(e).status(500);
+ 
 }
-})
+)
 app.listen(1200,()=>{
   console.log("Server Started");
 })
