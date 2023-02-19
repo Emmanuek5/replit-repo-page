@@ -5,6 +5,12 @@ This API allows developers to generate fake data or information quickly and easi
  
 
 
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://blueobsidian.my.canva.site/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/blue-obsidian-033b67266/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/@BlueObsidian8)
+
+
 ## Demo
 
 https://Fake-Data-Generator.blueobsidian.repl.co
