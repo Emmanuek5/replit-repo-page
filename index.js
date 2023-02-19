@@ -27,6 +27,9 @@ try {
       res.send("Pls Provide A NUmber").status(400)
       return
     }
+    if (variations) {
+      
+    }
 const data = await generateFakeUserData(number)
 console.log( data.length)
     res.json(data)
