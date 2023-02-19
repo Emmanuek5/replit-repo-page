@@ -51,6 +51,17 @@ const fakeUserData = [];
   }
   return fakeUserData;
 }
+function addVariation(variation,users) {
+  const name = variation.name
+  const type = variation.type
+  const lenght = variation.length
+
+
+}
+
+
 module.exports = {
   generateFakeUserData,
+  rand,
+  addVariation
 };

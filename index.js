@@ -4,7 +4,7 @@ const path = require('path');
 const bcrypt = require('bcrypt')
 const fs = require('fs')
 const { urlencoded } = require('body-parser')
-const { generateFakeUserData } = require('./functions/fakeuser')
+const { generateFakeUserData, addVariation } = require('./functions/fakeuser')
 app.use(express.json())
 app.use(urlencoded({extended: false}))
 const  users = []
@@ -27,12 +27,15 @@ try {
       res.send("Pls Provide A NUmber").status(400)
       return
     }
-    if (variations) {
-      
-    }
+   
 const users = await generateFakeUserData(number)
-
-    res.json(users)
+ if (variations) {
+  const newrow = addVariation(variations,users)
+      res.json(newrow);
+      return;
+    }
+      res.json(users);
+  
 } catch (e){}
  res.send(e).status(500);
  
