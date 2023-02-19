@@ -30,8 +30,12 @@ try {
     if (variations) {
       
     }
-const data = await generateFakeUserData(number)
-console.log( data.length)
+const users = await generateFakeUserData(number)
+ const data= {
+   users,
+   ip: req.ip,
+   
+ }
     res.json(data)
 } catch (e) {
   res.send(e).status(500)
