@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const path = require('path');
 const bcrypt = require('bcrypt')
 const fs = require('fs')
 const { urlencoded } = require('body-parser')
@@ -7,7 +8,7 @@ const { generateFakeUserData } = require('./functions/fakeuser')
 app.use(express.json())
 app.use(urlencoded({extended: false}))
 const  users = []
-app.use(express.static("./public"))
+app.use(express.static(path.join(__dirname, "src/public")));
 app.get('/video', (req, res) =>
 {
   res.render("./api1.mp4")
