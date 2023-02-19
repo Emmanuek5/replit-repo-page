@@ -3,79 +3,78 @@
 <head>
 	<meta charset="utf-8">
 	<title>Node Api</title>
-	<style type="text/css">
-	
-	body{
-		background-color: yellow;
-	}
-    .code{
-    	padding: 30px;
-    	background-color: grey;
-    	width: 700px;
-    	height: 80px;
+	<link rel="stylesheet" href="https://w3css.blueobsidian.repl.co/w3css/w3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200;1,400&display=swap"
+		rel="stylesheet">
 
-    }
-     .url{
-     	list-style: none;
-     }
-      
-    .video{
-    	
-    	width: 500px;
-    	height: 450px;
-      border-radius: 14px;
-      
-    } 
-  p{
-    text-aling:left;
-    
-    }
+	<style type="text/css">
+	body{
+			background-color: whitesmoke;
+			font-family: 'Montserrat', sans-serif;
+			border-radius: 5%;
+		}
 	</style>
 </head>
 <body>
-<h1>Node.js Api</h1>
-<p>You Will Be Using This Url's To Access The Api Credentials</p>
-<div >
-	<p>Note: This Is Only For Rest client if your not using it for rest testing  then you have to first create a user that you can access </p>
-	<ul>
-		<p>The Url Is :<li class="url" >https://andrew.blueobsidian.repl.co/users</li></p>
-		<p> You Will Be Accessing This Api To Show The Amount Of Users</p>
-		<pre class="code">
-			Get https://andrew.blueobsidian.repl.co/users
-
-		</pre>
-		<p>Or If Your Submitting A New User Use This Code(Creating A New User)</p>
-		<pre class="code">
-			POST https://andrew.blueobsidian.repl.co/users
-			Content-type: application/json
-			   {
-				 "name":"your name",
-				 "password":"your password"
-
-			   }
-		</pre>
-
-	</ul>
-
+<div class="w3-container w3-black">
+	<h1>Fake User Generator</h1>
+	
 </div>
-<div><ul>
-	<p>To Call The User Data With The Credentials You've Just Made      .You Use </p>
-    <pre class="code">
-    POST https://andrew.blueobsidian.repl.co/users/login
-	     Content-type: application/json
-			   {
-				 "name":"the name you used",
-				 "password":"the password you used"
- 
-			   }
-      
-    <strong>Make Sure You Leave Some Space Between Url And The Content</strong>
-    </ul>
-    </pre>
+<br>
+<br>
+<div class="w3-container w3-card w3-shadow">
+	<h4>
+		Generate's A Random Id, Username, email, password Fot You To Use In Your Next Project  <br>
+		<a href="#custom">Custom Response</a>
+	</h4>
+</div>
+<br>
+<div class="w3-panel w3-card w3-light-grey">
+	<h4>Example Request:</h4>
 
+	<div class="w3-code jsHigh notranslate">
+		const users = await fetch("https://fakegen.blueobsidian.repl.co/fake/users?number=");<br>
+		const res = users.json() ; <br>
+	</div>
+	<h4>Response</h4>
 
+	<div class="w3-code jsHigh notranslate">
+	{
+			name: name,<br>
+			password: password, <br>
+			email: email <br>
+		}
+	</div>
+</div>
 
+ <div class="w3-container" id="custom">
+	<div class="w3-panel w3-card w3-light-grey">
+		<h4>To Add A Variation To The Response Use The Code Below</h4>
+	<div class="w3-code jsHigh notranslate">
+		const options = {
+        name: "discordId", <br>
+		type: String, <br>
+		}
+		<br>
+		const users = await fetch(`https://fakegen.blueobsidian.repl.co/fake/users?number=10&variation=${options}`);<br>
+		const res = users.json() ; <br>
+	</div>
+	<h4>Response</h4>
+	
+	<div class="w3-code jsHigh notranslate">
+		{
+		name: "Bot",<br>
+		password: "password", <br>
+		email: "hello@yy.com", <br>
+		discordId: "1231312313"
+		}
+	</div>
+	</div>
+ </div>
 
+		<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
 </body>
 </html>

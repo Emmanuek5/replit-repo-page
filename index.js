@@ -11,7 +11,7 @@ app.get('/video', (req, res) =>
 {
   res.render("./api1.mp4")
 })
-app.get('/nodejs',(req, res) =>{
+app.get('/user',(req, res) =>{
   res.render('node.ejs')
 })
 app.get('/', (req ,res) =>{
